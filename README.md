@@ -10,4 +10,4 @@ Features:
 
 ToDo:
 - vectorize rest of the code once Microsoft releases new vector instructions needed
-- possibly vectorize salsa while code access remains in constant-time (against side-channel attacks)
+- possibly vectorize poly1305 while code access remains in constant-time (against side-channel attacks)
