@@ -9,5 +9,5 @@ Features:
 -
 
 ToDo:
-- vectorize rest of the code once Microsoft releases new vector instructions needed
+- vectorize rest of the code once Microsoft releases required vector instructions
 - possibly vectorize poly1305 while code access remains in constant-time (against side-channel attacks)
