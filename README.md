@@ -3,7 +3,7 @@ Extends .NET Crypto API with support for symmetric ciphers ChaCha and Salsa and 
 
 Features:
 - ChaCha and Salsa with 256-bit security strength using 20, 12 or 8 rounds (but in reality any number N >= 8 and N % 2 == 0 is supported)
-- Supports original Salsa/Chacha variant and RFC7539 variant of both ciphers.
+- Supports original Salsa/Chacha variant and RFC7539 variant of both ciphers (RFC was customized for network protocol use, originals are better for HDD encryption as they can handle more data).
 - Fully optimized code using branches that are specifically crafted for x86/x64 instruction set.
 - Partially vectorized code, specifically XOR SIMD vectorization which is using CPU avaible instruction set for best performance (SSE 128bit, AVX-256 256bit - Xor op)
 - Efficient memory access (reusing of buffers)
