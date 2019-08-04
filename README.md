@@ -12,11 +12,15 @@ Features:
 - Benchmark test provided (i5-4690K 4-cores, no HT, 3.5Ghz; 16GB DDR3 RAM 1600Mhz - 110MB/s enc, 102MB/s dec)
 
 ToDo:
-##.NET Core
-- consider .NET Core port (using full SIMD support with Span<T> and Memory<T> optimizations and using Unsafe class)
+-----
 
-##.NET Framework
-- vectorize rest of the code once Microsoft releases required vector instructions
-- add parallel support to use multiple cores
-- use x64 (long/ulong) to access state of cipher to get ~1-5% speed-up?
-- possibly vectorize poly1305 while code access remains in constant-time (against side-channel attacks) and allocations must use constant-memory not variable-memory as BitInteger impl (security)
+.NET Core
+----------
+- [ ] consider .NET Core port (using full SIMD support with Span<T> and Memory<T> optimizations and using Unsafe class)
+
+.NET Framework
+----------------
+- [ ] vectorize rest of the code once Microsoft releases required vector instructions
+- [ ] add parallel support to use multiple cores?
+- [ ] use x64 (long/ulong) to access state of cipher to get ~1-5% speed-up?
+- [ ] possibly vectorize poly1305 while code access remains in constant-time (against side-channel attacks) and allocations must use constant-memory not variable-memory as BitInteger impl (security)
