@@ -15,4 +15,4 @@ ToDo:
 - vectorize rest of the code once Microsoft releases required vector instructions
 - add parallel support to use multiple cores
 - use x64 (long/ulong) to access state of cipher to get ~1-5% speed-up?
-- possibly vectorize poly1305 while code access remains in constant-time (against side-channel attacks)
+- possibly vectorize poly1305 while code access remains in constant-time (against side-channel attacks) and allocations must use constant-memory not variable-memory as BitInteger impl (security)
