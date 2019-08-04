@@ -11,6 +11,7 @@ Features:
 - 
 
 ToDo:
+- consider .NET Core port (using full SIMD support with Span<T> and Memory<T> optimizations and using Unsafe class)
 - vectorize rest of the code once Microsoft releases required vector instructions
 - add parallel support to use multiple cores
 - use x64 (long/ulong) to access state of cipher to get ~1-5% speed-up?
