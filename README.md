@@ -17,7 +17,7 @@ ToDo:
 
 .NET Core
 ----------
-- [ ] consider .NET Core port (using full SIMD support with Span<T> and Memory<T> optimizations and using Unsafe class)
+- [ ] consider .NET Core port (using full **SIMD support with Span and Memory** optimizations and using **Unsafe** class)
 
 .NET Framework
 ----------------
