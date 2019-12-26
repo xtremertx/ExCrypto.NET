@@ -7,7 +7,7 @@ Features:
 - Supports original Salsa/Chacha variant and RFC7539 variant of both ciphers (RFC was customized for network protocol use, originals are better suited for HDD encryption as they can handle more data per (key, nonce) pair).
 - Fully optimized code using branches that are specifically crafted for x86/x64 instruction set.
 - Partially vectorized code (SIMD), specifically XOR instructions for best performance (supporting: SSE 128bit, AVX-256 256bit)
-- Efficient memory access in Poly1305 (reusing of buffers)
+- Efficient memory access in Poly1305 (reusing of constant-buffer for hash output)
 - Integrated into .NET Crypto API, fully compatible with existing API.
 - Unit tests provided (encryption, decryption, inner state, reusing instances, etc.)
 - Implemented and tested against all the test vectors provided on the: https://tools.ietf.org/html/rfc7539 (see: unit tests section)
