@@ -2,6 +2,7 @@
 Extends .NET Crypto API with support for symmetric ciphers ChaCha and Salsa and their respective variants. Also featuring Poly1305 reference implementation.
 
 Features:
+---------
 - ChaCha and Salsa symmetric ciphers with 256-bit security strength using 20, 12 or 8 rounds (impl. can handle any amouth of rounds that satisfy the following conditions: N >= 8 and N % 2 == 0, where N = amouth of rounds)
 - Supports original Salsa/Chacha variant and RFC7539 variant of both ciphers (RFC was customized for network protocol use, originals are better suited for HDD encryption as they can handle more data per (key, nonce) pair).
 - Fully optimized code using branches that are specifically crafted for x86/x64 instruction set.
