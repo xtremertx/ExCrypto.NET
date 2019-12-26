@@ -2,15 +2,15 @@
 Extends .NET Crypto API with support for symmetric ciphers ChaCha and Salsa and their respective variants.
 
 Features:
-- ChaCha and Salsa with 256-bit security strength using 20, 12 or 8 rounds (but in reality any number N >= 8 and N % 2 == 0 is supported)
-- Supports original Salsa/Chacha variant and RFC7539 variant of both ciphers (RFC was customized for network protocol use, originals are better for HDD encryption as they can handle more data).
+- ChaCha and Salsa symmetric ciphers with 256-bit security strength using 20, 12 or 8 rounds (impl. can handle any amouth of rounds that satisfy the following conditions: N >= 8 and N % 2 == 0, where N = amouth of rounds)
+- Supports original Salsa/Chacha variant and RFC7539 variant of both ciphers (RFC was customized for network protocol use, originals are better suited for HDD encryption as they can handle more data per (key, nonce) pair).
 - Fully optimized code using branches that are specifically crafted for x86/x64 instruction set.
-- Partially vectorized code, specifically XOR SIMD vectorization which is using CPU avaible instruction set for best performance (SSE 128bit, AVX-256 256bit)
-- Efficient memory access (reusing of buffers)
-- Integrated into .NET Crypto API, fully compatible with existing API (like it was original algorithm)
-- Unit tests provided (encryption, decryption, inner state, reusing, etc.)
-- Implemented and tested against all the test vectors provided on the: https://tools.ietf.org/html/rfc7539 (see unit tests)
-- Benchmark test provided (i5-4690K 4-cores, no HT, 3.5Ghz; 16GB DDR3 RAM 1600Mhz - 110MB/s enc, 102MB/s dec)
+- Partially vectorized code (SIMD), specifically XOR instructions for best performance (supporting: SSE 128bit, AVX-256 256bit)
+- Efficient memory access in Poly1305 (reusing of buffers)
+- Integrated into .NET Crypto API, fully compatible with existing API.
+- Unit tests provided (encryption, decryption, inner state, reusing instances, etc.)
+- Implemented and tested against all the test vectors provided on the: https://tools.ietf.org/html/rfc7539 (see: unit tests section)
+- Benchmark rutine provided (i5-4690K 4-cores, no HT, 3.5Ghz; 16GB DDR3 RAM 1600Mhz, Stats: ~ 110MB/s enc, ~ 102MB/s dec)
 
 ToDo:
 -----
