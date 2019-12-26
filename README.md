@@ -13,6 +13,10 @@ Features:
 - Implemented and tested against all the test vectors provided on the: https://tools.ietf.org/html/rfc7539 (see: unit tests section)
 - Benchmark rutine provided (i5-4690K 4-cores, no HT, 3.5Ghz; 16GB DDR3 RAM 1600Mhz, Stats: ~ 110MB/s enc, ~ 102MB/s dec)
 
+Usage
+-----
+- See Wiki
+
 Considerations:
 ---------------
 - You may use different implementation in case you need higher performance implementation (MB/s), especially in case of HDD encryption where you are encrypting big files.
