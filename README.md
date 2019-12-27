@@ -3,8 +3,8 @@ Extends .NET Crypto API with support for symmetric ciphers ChaCha and Salsa and 
 
 Features:
 ---------
-- ChaCha and Salsa symmetric ciphers with 256-bit security strength using 20, 12 or 8 rounds (impl. can handle any amouth of rounds that satisfy the following conditions: N >= 8 and N % 2 == 0, where N = amouth of rounds)
-- Both Salsa and Chacha cipher do support original and RFC7539 variant (RFC was customized for network protocol use, originals are better suited for HDD encryption as they can handle more data per (key, nonce) pair, RFC was also specifically for ChaCha).
+- **ChaCha** and **Salsa** symmetric ciphers with **256-bit security strength** using 20, 12 or 8 rounds (impl. can handle any amouth of rounds that satisfy the following conditions: N >= 8 and N % 2 == 0, where N = amouth of rounds)
+- Both Salsa and Chacha cipher do support **original** and **RFC7539** variant (RFC was customized for network protocol use, originals are better suited for HDD encryption as they can handle more data per (key, nonce) pair, RFC was also specifically for ChaCha).
 - Fully optimized code using branches that are specifically crafted for x86/x64 instruction set.
 - Partially vectorized code (SIMD), specifically XOR instructions for best performance (supporting: SSE 128bit, AVX-256 256bit)
 - Efficient memory access in Poly1305 (reusing of constant-buffer for hash output)
@@ -20,7 +20,7 @@ Usage
 Considerations:
 ---------------
 - You may use different implementation in case you need higher performance implementation (MB/s), especially in case of HDD encryption where you are encrypting big files.
-- Poly1305 is tested but doesnt feature best performance, also its implementation is not featuring constant-memory access (without allocations) which may or may not be used for side-channel attacks.
+- Poly1305 is tested but does not feature best performance, also its implementation is not using constant-memory access (without allocations) which may or may not be used for side-channel attacks.
 - Both Chacha and Salsa do not support 128-bit version.
 
 ToDo:
