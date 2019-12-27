@@ -28,7 +28,7 @@ Support Overview
 | RFC 7539 variant | Yes | Yes(\*) |
 | Original paper variant | Yes | Yes |
 
-\* = *RFC 7539 was originaly intended only for ChaCha, however I have implemented it for Salsa too.* 
+\**RFC 7539 was originaly intended only for ChaCha, however I have implemented it for Salsa too.* 
 
 Considerations:
 ---------------
