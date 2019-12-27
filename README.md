@@ -22,8 +22,8 @@ Support Overview
 
 | Feature | ChaCha | Salsa |
 | ------------- | ------------- | ------------- |
-| 256-bit key strength | Yes | Yes |
-| 128-bit key strength | No | No |
+| 256-bit key | Yes | Yes |
+| 128-bit key | No | No |
 | Rounds amouth | 20, 12, 8 | 20, 12, 8 |
 | RFC 7539 variant | Yes | Yes |
 | Original paper variant | Yes | Yes |
