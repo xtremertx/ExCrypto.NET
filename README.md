@@ -1,5 +1,5 @@
 # ExCrypto.NET
-Extends .NET Crypto API with support for symmetric ciphers ChaCha and Salsa and their respective variants. Also featuring Poly1305 a secret-key message-authentication code reference implementation. All the algorithms are based on work by Daniel J. Bernstein.
+Extends .NET Crypto API with support for symmetric ciphers ChaCha and Salsa and their respective variants. Also featuring Poly1305 a secret-key message-authentication code reference implementation. All the algorithms are based on work by **Daniel J. Bernstein**.
 
 Features:
 ---------
@@ -24,7 +24,7 @@ Support Overview
 | ------------- | ------------- | ------------- |
 | 256-bit key | Yes | Yes |
 | 128-bit key | No | No |
-| Rounds amouth | 20, 12, 8 | 20, 12, 8 |
+| Rounds amouth | 8, 12, 20 | 8, 12, 20 |
 | RFC 7539 variant | Yes | Yes(\*) |
 | Original paper variant | Yes | Yes |
 
@@ -36,8 +36,8 @@ Considerations:
 - You may use different implementation in case you need higher performance implementation (MB/s), especially in case of HDD encryption where you are encrypting big files.
 - Poly1305 is well tested but does not feature best performance, also its implementation is not using constant-memory access (without allocations) which may or may not be used for side-channel attacks.
 
-ToDo:
------
+Feature work:
+-------------
 
 .NET Core
 ----------
