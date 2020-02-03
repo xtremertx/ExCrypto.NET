@@ -15,7 +15,7 @@ Features:
 
 Usage
 -----
-- See Wiki
+- See [Wiki](https://github.com/xtremertx/ExCrypto.NET/wiki)
 
 Support Overview
 ------------------
@@ -33,7 +33,7 @@ Support Overview
 Considerations:
 ---------------
 - This implementation tries to offer a minimalistic code, good efficiency and security.
-- You may use different implementation in case you need higher performance implementation (MB/s), especially in case of HDD encryption where you are encrypting big files.
+- You may use different implementation in case you need higher performance (MB/s), especially in case of HDD encryption where you are encrypting big files.
 - Poly1305 is well tested but does not feature best performance, also its implementation is not using constant-memory access (without allocations) which may or may not be used for side-channel attacks.
 
 Feature work:
@@ -45,7 +45,12 @@ Feature work:
 
 .NET Framework
 ----------------
-- [ ] vectorize rest of the code once Microsoft releases required vector instructions
+- [x] vectorize rest of the code once Microsoft releases required vector instructions (not gonna happen)
 - [ ] add parallel support to use multiple cores?
 - [ ] use x64 (long/ulong) to access state of cipher to get ~1-5% speed-up?
 - [ ] possibly vectorize poly1305 while code access remains in constant-time (against side-channel attacks) and allocations must use constant-memory not variable-memory as BigInteger impl (security)
+
+Other
+-----
+- [ ] Being a stream cipher you can also precompute the keystream. This reduces encrypt/decrypt to a simple XOR when handling the message - depending on message length of course.
+- [ ] One can eliminate all of these costs by fully unrolling the loop. (keystream core)
