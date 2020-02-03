@@ -25,10 +25,10 @@ Support Overview
 | 256-bit key | Yes | Yes |
 | 128-bit key | No | No |
 | Rounds amouth | 8, 12, 20 | 8, 12, 20 |
-| RFC 7539 variant | Yes | Yes(\*) |
+| RFC 7539 variant | Yes | Yes¹ |
 | Original paper variant | Yes | Yes |
 
-\**RFC 7539 is officially intended only for ChaCha, however I have implemented it for Salsa too.* 
+> *¹RFC 7539 is officially intended only for ChaCha, however I have implemented it for Salsa too.* 
 
 Considerations:
 ---------------
