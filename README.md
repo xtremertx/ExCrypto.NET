@@ -33,7 +33,7 @@ Support Overview
 Considerations:
 ---------------
 - This implementation tries to offer a minimalistic code, good efficiency and security.
-- You may use different implementation in case you need higher performance (MB/s), especially in case of HDD encryption where you are encrypting big files.
+- You may use different implementation in case you need higher performance (MB/s), especially in case of HDD encryption where you are encrypting large files.
 - Poly1305 is well tested but does not feature best performance, also its implementation is not using constant-memory access (without allocations) which may or may not be used for side-channel attacks.
 
 
