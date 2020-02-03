@@ -39,7 +39,7 @@ Considerations:
 
 Versioning
 ----------
-We are using [SemVer](https://semver.org/) versioning for releases.
+This project uses following versioning: [SemVer](https://semver.org/)
 
 Feature work:
 -------------
