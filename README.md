@@ -43,7 +43,7 @@ We are using [SemVer](https://semver.org/) versioning for releases.
 
 Feature work:
 -------------
-
+***
 .NET Core
 ----------
 - [ ] consider .NET Core port (using full **SIMD support with Span and Memory** optimizations and using **Unsafe** class)
