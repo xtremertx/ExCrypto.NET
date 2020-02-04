@@ -46,16 +46,16 @@ Feature work:
 ***
 .NET Core
 ----------
-- [ ] consider .NET Core port (using full **SIMD support with Span and Memory** optimizations and using **Unsafe** class)
+- [ ] Consider .NET Core port (using full **SIMD support with Span and Memory** optimizations and using **Unsafe** class)
 
 .NET Framework
 ----------------
 - [x] vectorize rest of the code once Microsoft releases required vector instructions (not gonna happen)
 - [ ] add parallel support to use multiple cores?
-- [ ] use x64 (long/ulong) to access state of cipher to get ~1-5% speed-up?
+- [ ] use x64 (long/ulong) to access state of cipher to get ~1-5% speed-up? (bit tweaking is prepared)
 - [ ] possibly vectorize poly1305 while code access remains in constant-time (against side-channel attacks) and allocations must use constant-memory not variable-memory as BigInteger impl (security)
 
 Other
 -----
-- [ ] Being a stream cipher you can also precompute the keystream. This reduces encrypt/decrypt to a simple XOR when handling the message - depending on message length of course.
-- [ ] One can eliminate all of these costs by fully unrolling the loop. (keystream core)
+- [ ] Being a stream cipher you can also precompute the keystream. This reduces encrypt/decrypt to a simple XOR when handling the message - depending on message length of course. (this can create significant boost to performance, but tradeoff is memory, maybe we can pre-generate keystream material based on the message side and do some benchmarking to find optimal sizes, but we should never pre-generate and cache keystream as that could introduce vulnerability?)
+- [ ] One can eliminate all of these costs by fully unrolling the loop. (keystream core unrolling)
