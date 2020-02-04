@@ -57,5 +57,5 @@ Feature work:
 
 Other
 -----
-- [ ] Being a stream cipher you can also precompute the keystream. This reduces encrypt/decrypt to a simple XOR when handling the message - depending on message length of course. (this can create significant boost to performance, but tradeoff is memory, maybe we can pre-generate keystream material based on the message side and do some benchmarking to find optimal sizes, but we should never pre-generate and cache keystream as that could introduce vulnerability?)
+- [ ] Being a stream cipher you can also precompute the keystream. This reduces encrypt/decrypt to a simple XOR when handling the message - depending on message length of course. (this can create significant boost to performance, but tradeoff is memory, maybe we can pre-generate keystream material based on the message side and do some benchmarking to find optimal sizes, but we should never pre-generate and cached keystream as that could introduce vulnerability?)
 - [ ] One can eliminate all of these costs by fully unrolling the loop. (keystream core unrolling)
